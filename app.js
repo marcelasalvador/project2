@@ -32,12 +32,14 @@ var authRouter = require('./routes/auth');
 var cartRouter = require('./routes/cart');
 var galleryRouter = require('./routes/gallery');
 var paymentRouter = require('./routes/payment');
+var usersRouter = require('./routes/users');
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/cart', cartRouter);
 app.use('/gallery', galleryRouter);
 app.use('/payment', paymentRouter);
+app.use('/users', usersRouter);
 
 
 
