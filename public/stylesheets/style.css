@@ -1,0 +1,36 @@
+body {
+
+}
+
+.thumbnail img {
+    max-height: 150px;
+}
+
+.thumbnail .description {
+    color: #7f7f7f;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 0.9em;
+    transition: all 0.5s;
+}
+.navbar .navbar-nav .nav-link:hover {
+  background-color: white;
+ 
+}
+
+.navbar-brand {
+  font-size: 2em;
+}
+
+.wrapper{background: url('https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w" class="img-responsive" alt="Responsive image') no-repeat   center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; height: 100vh; }

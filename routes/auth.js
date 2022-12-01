@@ -9,7 +9,7 @@ const saltRounds = 10
 
 
 router.get('/login', (req, res, next) => {
-    res.render('auth-views/login')
+    res.render('auth-views/login.hbs')
 })
 
 router.post('/login', (req, res, next) => {
@@ -29,20 +29,20 @@ router.post('/login', (req, res, next) => {
                 req.session.user = foundUser;
                 res.render('index', {message: "You have logged in"})
             } else {
-                res.render('auth-views/login', {message: "Incorrect Password or Email"})
+                res.render('auth-views/login.hbs', {message: "Incorrect Password or Email"})
             }
-        }z
+        }
     })    
 })
 
 router.get('/register', (req, res, next) => {
-    res.render('auth-views/register')
+    res.render('auth-views/register.hbs')
 })
 
 
 router.post('/register', (req, res, next) => {
 
-    if (!req.body.fullName || !req.body.email || !req.body.password)
+    if (!req.body.name || !req.body.email || !req.body.password)
     {
         res.render('auth-views/register', {message: "Please fill out all fields"})
         return;
@@ -58,12 +58,15 @@ router.post('/register', (req, res, next) => {
             res.render('auth-views/register', {message: "You have already registered"})
             return
         } else {
+
+            console.log("trying to create user")
                 User.create({
-                    fullName: req.body.fullName,
+                    name: req.body.name,
                     email: req.body.email,
                     password: hashedPass
                 })
-                .then(() => {
+                .then((createdUser) => {
+                    console.log("this is the user we created", createdUser)
                     res.redirect('/auth/login')
                 })
                 .catch((err) => {
@@ -80,7 +83,7 @@ router.post('/register', (req, res, next) => {
 
 router.get('/logout', (req, res, next) => {
     req.session.destroy()
-    res.render('auth-views/index', {message: "You have logged out"})
+    res.redirect('/')
 })
 
 module.exports = router

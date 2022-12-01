@@ -5,15 +5,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express' });
+    res.render('index.hbs', { title: 'los andes' });
   });
   
   module.exports = router;
   
-// /* GET home page. */
-// router.get('/', function(req, res, next) {
-//     var products = Products.find();
-//   res.render('shop/gallery', { title: 'Shopping Cart', products: products });
-// });
-
-// module.exports = router;

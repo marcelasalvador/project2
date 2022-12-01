@@ -33,7 +33,7 @@ var cartRouter = require('./routes/cart');
 var galleryRouter = require('./routes/gallery');
 var paymentRouter = require('./routes/payment');
 
-app.use('/index', indexRouter);
+app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/cart', cartRouter);
 app.use('/gallery', galleryRouter);
