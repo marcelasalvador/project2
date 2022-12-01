@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var hbs = require("hbs")
+
 
 var app = express();
 
@@ -16,6 +18,8 @@ require('dotenv/config');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+hbs.registerPartials(__dirname + "/views/partials");
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -24,15 +28,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
 var cartRouter = require('./routes/cart');
-
+var galleryRouter = require('./routes/gallery');
+var paymentRouter = require('./routes/payment');
 
 app.use('/index', indexRouter);
-app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/cart', cartRouter);
+app.use('/gallery', galleryRouter);
+app.use('/payment', paymentRouter);
 
 
 

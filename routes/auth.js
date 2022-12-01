@@ -22,7 +22,7 @@ router.post('/login', (req, res, next) => {
     User.findOne({email: req.body.email})
     .then((foundUser) => {
         if (!foundUser) {
-            res.render('auth-views/login', {message: "This User does not exist"})
+            res.render('auth-views/login', {message: "User does not exist. Please register."})
         } else {
             let correctPassword = bcryptjs.compareSync(req.body.password, foundUser.password);
             if(correctPassword) {
@@ -31,20 +31,20 @@ router.post('/login', (req, res, next) => {
             } else {
                 res.render('auth-views/login', {message: "Incorrect Password or Email"})
             }
-        }
+        }z
     })    
 })
 
-router.get('/signup', (req, res, next) => {
-    res.render('auth-views/signup')
+router.get('/register', (req, res, next) => {
+    res.render('auth-views/register')
 })
 
 
-router.post('/signup', (req, res, next) => {
+router.post('/register', (req, res, next) => {
 
     if (!req.body.fullName || !req.body.email || !req.body.password)
     {
-        res.render('auth-views/signup', {message: "You must fill out all fields"})
+        res.render('auth-views/register', {message: "Please fill out all fields"})
         return;
     }
 
@@ -55,7 +55,7 @@ router.post('/signup', (req, res, next) => {
     User.findOne({email: req.body.email})
         .then((foundUser) => {
             if (foundUser){
-            res.render('auth-views/signup', {message: "You have already signed up"})
+            res.render('auth-views/register', {message: "You have already registered"})
             return
         } else {
                 User.create({
@@ -80,7 +80,7 @@ router.post('/signup', (req, res, next) => {
 
 router.get('/logout', (req, res, next) => {
     req.session.destroy()
-    res.render('auth-views/login', {message: "You have logged out"})
+    res.render('auth-views/index', {message: "You have logged out"})
 })
 
 module.exports = router

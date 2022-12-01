@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/cart', function(req, res, next) {
-    res.render('shop-views/cart')
+router.get('/gallery', function(req, res, next) {
+    res.render('shop-views/gallery')
 });
 
 module.exports = router;
