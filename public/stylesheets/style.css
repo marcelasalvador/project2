@@ -28,6 +28,7 @@ html, body {
 
 .navbar-brand {
   font-size: 2em;
+  font-weight: lighter;
 }
 
 .wrapper{background: url('https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w" class="img-responsive" alt="Responsive image') no-repeat   center center fixed;
@@ -63,4 +64,19 @@ transition: transform 200ms,background 200ms;
 #small-buttons:hover{
   color:#ffffff;
   transition: all 0.5s;
+}
+
+#small-buttons-download {
+  
+  font-size:smaller;
+  color:grey;
+}
+
+.caption {
+  color: grey;
+}
+
+h3 {
+  font-size:large;
+  color: black
 }
