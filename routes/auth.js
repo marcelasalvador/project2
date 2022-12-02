@@ -55,7 +55,7 @@ router.post('/register', (req, res, next) => {
     User.findOne({email: req.body.email})
         .then((foundUser) => {
             if (foundUser){
-            res.render('auth-views/register', {message: "You have already registered"})
+            res.render('auth-views/register', {message: "User exists. Please login."})
             return
         } else {
 

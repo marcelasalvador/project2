@@ -2,7 +2,7 @@
 
 <!-- form start-->
 
-  <div class="d-flex flex-row justify-content-center align-self-center bg-black">
+  <div class=" h-100 d-flex flex-row justify-content-center align-self-center bg-black">
     <form "d-flex justify-content-center" action="/auth/login" method="POST">
       <div>
         <label class=" text-white mt-5" for="email">Email</label>
@@ -11,19 +11,25 @@
         <input class="mt-2" type="email" id="email" name="email"required>
       </div>
       <div>
-        <label class="text-white mt-2" for="password">Password</label>
+        <label class="text-white mt-3" for="password">Password</label>
       </div>
       <div>
         <input class="mt-2" type="password" id="password" name="password"required>
       </div>
       <div class="d-flex flex-row justify-content-center align-self-center">
-        <button class="mt-4  " type="submit">Login</button>
+        <button class="mt-4 auth-buttons " type="submit">Login</button>
       </div>
       <div class="d-flex flex-row justify-content-center align-self-center bg-black">
-        <a class="text-white" href="/register">Register</a>
+        <a class="text-white mt-3 text-muted" id="small-buttons" href="/register">Register</a>
       </div>
+      <div class="d-flex flex-row justify-content-center align-self-center">
+       {{#if message}}
+        <p class="text-white mt-3">{{message}}</p>
+        {{/if}}
+        </div>
     </form>
-     
+    
+
   </div>
     
 <!--  <footer>

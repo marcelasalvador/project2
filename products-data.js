@@ -7,45 +7,45 @@ const products = [
         {
         imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w',
         title:"Antisana",
-        description: "volcano",
+        description: "5,704 m",
         price: "Free"
 
         },
         
         {
-          imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w',
-          title:"Antisana",
-          description: "volcano",
+          imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405234230-7CEUXBXB2RI5QSS63K1W/IMG_0291.jpg?format=2500w',
+          title:"Chimborazo",
+          description: "6,263 m",
           price: "Free"
   
           },
 
           {
-            imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w',
-            title:"Antisana",
-            description: "volcano",
+            imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521408716748-V9H6HZEHB749S5N8FDMA/IMG_0090.jpg?format=2500w',
+            title:"Cotopaxi",
+            description: "5,897 m",
             price: "Free"
     
             },
 
             {
-              imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w',
-              title:"Antisana",
-              description: "volcano",
+              imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405239855-MLYBOFS0HD3IZLD72PUI/IMG_0344.jpg?format=2500w',
+              title:"El Altar",
+              description: "5,319 m",
               price: "Free"
       
               },
               {
-                imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w',
-                title:"Antisana",
-                description: "volcano",
+                imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405250999-7OWNM9UB6SFMYHHEY5C4/IMG_9955.jpg?format=2500w',
+                title:"Rucu Pichincha",
+                description: "4,698 m",
                 price: "Free"
         
                 },
                 {
-                  imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w',
-                  title:"Antisana",
-                  description: "volcano",
+                  imagePath: 'https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405242728-ILFDCG9JLVEW1VPHZUYU/IMG_0596.jpg?format=2500w',
+                  title:"Cotacachi",
+                  description: "4,944 m",
                   price: "Free"
           
                   },
