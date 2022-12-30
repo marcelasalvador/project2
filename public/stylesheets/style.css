@@ -22,7 +22,12 @@ html, body {
     transition: all 0.5s;
 }
 .navbar .navbar-nav .nav-link:hover {
-  background-color: white;
+  /* background-color: black; */
+  color: black;
+  font-weight: normal;
+  text-decoration: underline;
+  
+  
  
 }
 
@@ -30,6 +35,14 @@ html, body {
   font-size: 2em;
   font-weight: lighter;
 }
+
+/* .navbar-toggler {
+  border: .4rem solid #ccc;
+}
+
+.navbar-toggler-icon {
+  border: .4rem solid #ccc;
+} */
 
 .wrapper{background: url('https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w" class="img-responsive" alt="Responsive image') no-repeat   center center fixed;
 -webkit-background-size: cover;
@@ -42,12 +55,12 @@ display: inline-block;
 outline: 0;
 border: 0;
 cursor: pointer;
-background: #ffffff;
-color: #000000;
+background: #000000;
+color: #ffffff;
 border-radius: 8px;
 padding: 10px 18px 10px;
 font-size: 18px;
-font-weight: 700;
+font-weight: 500;
 line-height: 1;
 transition: transform 200ms,background 200ms;
 }

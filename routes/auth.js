@@ -9,7 +9,7 @@ const saltRounds = 10
 
 
 router.get('/login', (req, res, next) => {
-    res.render('auth-views/login.hbs')
+    res.render('auth-views/login')
 })
 
 router.post('/login', (req, res, next) => {
