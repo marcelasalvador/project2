@@ -11,34 +11,6 @@
   </head>
   
   <body class="bg-black">
-    
-  <!--   nav bar start   -->
-    {{!-- <nav class="navbar navbar-expand-lg bg-black pe-5">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white ps-5" href="/">Los Andes</a>
-        
-        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-    
-       <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item ">
-              <a class="nav-link text-muted" href="/gallery" target="_self">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-muted" target="_self" href="/auth/login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-muted" href="/auth/register" target="_self" >Register</a>
-             </li>
-             <li class="nav-item ">
-              <a class="nav-link text-muted" href="/auth/logout" target="_self">Logout</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-     </nav>  --}}
 
      
      <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -62,9 +34,11 @@
         <li class="nav-item">
           <a class="nav-link text-muted" href="/auth/register" target="_self" >Register</a>
          </li>
+         {{!-- {{#if foundUser}} --}}
          <li class="nav-item ">
           <a class="nav-link text-muted" href="/auth/logout" target="_self">Logout</a>
           </li>
+          {{!-- {{/if}} --}}
       </ul>
     </div>
   </div>
