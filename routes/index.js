@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index.hbs', { title: 'los andes' });
+    res.render('index.hbs', { userInSession: req.session.user } );
   });
   
   module.exports = router;

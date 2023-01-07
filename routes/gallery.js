@@ -2,18 +2,21 @@ var express = require('express');
 var router = express.Router();
 var Product = require("../models/Product.model")
 
-const { isLoggedIn } = require('../middleware/route-guard.js');
+const { isLoggedIn, isLoggedOut } = require("../middleware/route-guard")
 
-router.get('/gallery', isLoggedIn, (req, res, next) => {
+router.get('/', isLoggedOut, (req, res, next) => {
+    // res.send("gallery hit")
+    // console.log('/gallery route hit')
    Product.find()
+   
    .then((products) => {
     console.log("found products", products)
     
-    res.render('gallery.hbs', { userInSession: req.session.user }, {products} );
-    console.log(req.session.user)
+    res.render('gallery.hbs', { products, userInSession: req.session.user } );
+    // console.log(req.session.user)
    })
 .catch((err) => {
-    console.log(err)
+    console.log("error",err)
 })
 });
 

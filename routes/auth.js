@@ -1,9 +1,10 @@
-const express = require('express')
+const express = require ("express")
 const router = express.Router();
-
+const bcryptjs = require('bcryptjs')
+const app = require ("../app")
 const User = require('../models/User.model')
 
-const bcryptjs = require('bcryptjs')
+
 
 const saltRounds = 10
 
@@ -39,45 +40,37 @@ router.post('/register', isLoggedOut, (req, res, next) => {
 
             console.log("trying to create user")
                 User.create({
-                    _id: req.body._id,
                     name: req.body.name,
                     email: req.body.email,
                     password: hashedPass
                 },
-                {new: true}
+
                 )
                 .then((createdUser) => {
                     console.log("this is the user we created", createdUser)
-                    res.render('auth-views/login', {message: "Registration successful.Please login."})
-                    console.log(message)
-               
-                  
+                    res.redirect('/auth/login')
+                
                 })
-              
-               
                 .catch((err) => {
                     console.log(err)
+                    // res.render(err)
                 })
             }
-        })
-        .catch((err) => {
-            console.log(err)
-        })
 
-
+        })
+        
 
 })
 
-router.get('/login', isLoggedOut, (req, res, next) => {
+router.get('/login', (req, res, next) => {
     res.render('auth-views/login')
    
 })
 
-router.post('/login', isLoggedOut, (req, res, next) => {
+router.post('/login', (req, res, next) => {
     console.log('SESSION =====> ', req.session);
     if (!req.body.email|| !req.body.password) {
         res.render('auth-views/login', {message : "Both fields are required"})
-        
         return;
     } 
     
@@ -90,19 +83,25 @@ router.post('/login', isLoggedOut, (req, res, next) => {
             if(correctPassword) {
                 req.session.user = foundUser;
                 console.log({ userInSession: req.session.user })
-                res.render('index', {message: `You have logged in ${req.session.user }`})
+                res.redirect('/gallery')
                
             } else {
                 res.render('auth-views/login.hbs', {message: "Incorrect Password or Email"})
             }
         }
         
-    })    
+    })  
+    .catch((err) => {
+        console.log(err)
+    })  
+    .finally(() => {
+        console.log("These are RES locals", res.locals)
+    })
 })
 
 router.get('/logout', isLoggedIn, (req, res, next) => {
     req.session.destroy()
-    res.redirect('/', {message: "logged out"})
+    res.redirect('/auth/login')
 })
 
 module.exports = router

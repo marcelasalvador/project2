@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+const session = require('express-session')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -27,19 +28,24 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((req, res, next) => {
+  res.locals.isLoggedIn = req.session.user
+  console.log(res.locals)
+  next()
+})
+
+app.use((req, res, next) => {
+  res.locals.isLoggedOut = !req.session.user
+  next()
+})
+
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
-var cartRouter = require('./routes/cart');
 var galleryRouter = require('./routes/gallery');
-var paymentRouter = require('./routes/payment');
-var usersRouter = require('./routes/users');
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
-app.use('/cart', cartRouter);
 app.use('/gallery', galleryRouter);
-app.use('/payment', paymentRouter);
-app.use('/users', usersRouter);
 
 
 
