@@ -62,12 +62,12 @@ router.post('/register', isLoggedOut, (req, res, next) => {
 
 })
 
-router.get('/login', (req, res, next) => {
-    res.render('auth-views/login')
+router.get('/login', isLoggedOut, (req, res, next) => {
+    res.render('auth-views/login');
    
 })
 
-router.post('/login', (req, res, next) => {
+router.post('/login', isLoggedOut, (req, res, next) => {
     console.log('SESSION =====> ', req.session);
     if (!req.body.email|| !req.body.password) {
         res.render('auth-views/login', {message : "Both fields are required"})

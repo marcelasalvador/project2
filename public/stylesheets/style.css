@@ -44,11 +44,44 @@ html, body {
   border: .4rem solid #ccc;
 } */
 
-.wrapper{background: url('https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w" class="img-responsive" alt="Responsive image') no-repeat   center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover; height: 100vh; }
+
+
+.jumbotron {
+  position: relative;
+    background:  url('https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w');
+    background-position: center center; 
+    ;
+    background-size: cover;
+  height:89%;
+  background-size: cover;
+}
+
+.jumbotron > .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.jumbotron > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.btn {
+  transition: all 0.2s ease-in-out;
+  color:grey;
+  background-color: white;
+}
+
+.btn:hover {
+  color: rgb(29, 28, 28);
+
+}
+
 
 .auth-buttons{
 display: inline-block;

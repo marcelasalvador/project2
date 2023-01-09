@@ -15,7 +15,7 @@ require("./config/session.config")(app);
 
 require('dotenv/config');
 
-
+const { isLoggedIn, isLoggedOut } = require('./middleware/route-guard');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -28,16 +28,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use((req, res, next) => {
-  res.locals.isLoggedIn = req.session.user
-  console.log(res.locals)
-  next()
-})
+// app.use((req, res, next) => {
+//   res.locals.isLoggedIn = req.session.user
+//   console.log(res.locals)
+//   next()
+// })
 
-app.use((req, res, next) => {
-  res.locals.isLoggedOut = !req.session.user
-  next()
-})
+// app.use((req, res, next) => {
+//   res.locals.isLoggedOut = !req.session.user
+//   next()
+// })
+app.use(isLoggedIn);
+app.use(isLoggedOut);
+
+// ...
+
 
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
