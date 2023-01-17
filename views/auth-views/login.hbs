@@ -1,41 +1,65 @@
+<!-- Contact Start -->
+<div class="container-fluid py-5 px-0 ">
+  <h1 class="display-7 text-center mt-2 ">Log In</h1>
 
+  <div class="row mx-0 justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10 px-0">
+      <div class="contact-form bg-white rounded p-5">
+        <div id="success"></div>
+        <form
+         
+          action="/auth/login"
+          method="POST"
+        >
+           <div class="form-group">
+      
+              <div class="control-group">
+                <input
+                  type="email"
+                  for="email"
+                  class="form-control bg-light border-0 p-4"
+                  id="email"
+                  placeholder="Email"
+                  required="required"
+                  name="email"
+                  data-validation-required-message="Please enter your email"
+                />
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="control-group">
+                <input
+                  type="password"
+                  for="password"
+                  name="password"
+                  class="form-control bg-light border-0 p-4"
+                  id="password"
+                  placeholder="Password"
+                  required="required"
+                  data-validation-required-message="Please enter your password"
+                />
+                <p class="help-block text-danger"></p>
+              </div>
+              </div>
+            </div>
+          </div>
 
-<!-- form start-->
-
-  <div class=" h-100 d-flex flex-row justify-content-center align-self-center bg-black">
-    <form "d-flex justify-content-center" action="/auth/login" method="POST">
-      <div>
-        <label class=" text-dark mt-5" for="email">Email</label>
-      </div>
-      <div>
-        <input class="mt-2" type="email" id="email" name="email"required>
-      </div>
-      <div>
-        <label class="text-dark mt-3" for="password">Password</label>
-      </div>
-      <div>
-        <input class="mt-2" type="password" id="password" name="password"required>
-      </div>
-      <div class="d-flex flex-row justify-content-center align-self-center">
-        <button class="mt-4 auth-buttons " type="submit">Login</button>
-      </div>
-      <div class="d-flex flex-row justify-content-center align-self-center">
+          <div class="text-center">
+            <button
+              class="btn text-uppercase mt-3 py-2 px-5"
+              type="submit"
+            >Log in</button>
+            <div class="d-flex flex-row justify-content-center align-self-center bg-black">
         <a class="text-dark mt-3 text-muted" id="small-buttons" href="/auth/register">Register</a>
       </div>
-      <div class="d-flex flex-row justify-content-center align-self-center">
-       {{#if message}}
-        <p class="text-dark mt-3">{{message}}</p>
-        {{/if}}
-        
-        </div>
-    </form>
-    
+            {{#if message}}
+              <p class="text-dark mt-3">{{message}}</p>
+            {{/if}}
 
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-    
-<!--  <footer>
-    <a class="text-white bg-black" href="/gallery">Gallery</a>
-  </footer> -->
-<!-- {{#if message}}
-<p>{{message}}</p>
-{{/if}}
+</div>

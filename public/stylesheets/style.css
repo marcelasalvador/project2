@@ -29,38 +29,19 @@ body {
   font-weight: lighter;
 }
 
-.jumbotron {
-  position: relative;
-  background: url("https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w");
-  background-position: center center;
-  background-size: cover;
-  height: 89%;
-  background-size: cover;
-}
 
-.jumbotron > .overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.jumbotron > .container {
-  position: relative;
-  z-index: 2;
-}
 
 .btn {
   transition: all 0.2s ease-in-out;
-  color: grey;
-  background-color: white;
+  color: white;
+  background-color: rgb(29, 28, 28);
+  border-color: grey;
 }
 
 .btn:hover {
+  background-color: white;
   color: rgb(29, 28, 28);
+ 
 }
 
 .login {
@@ -81,24 +62,6 @@ body {
   
 }
 
-.auth-buttons {
-  display: inline-block;
-  outline: 0;
-  border: 0;
-  cursor: pointer;
-  background: #000000;
-  color: #ffffff;
-  border-radius: 8px;
-  padding: 10px 18px 10px;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1;
-  transition: transform 200ms, background 200ms;
-}
-
-.buttons:hover {
-  transform: translateY(-2px);
-}
 
 #small-buttons {
   font-size: small;
@@ -121,4 +84,18 @@ body {
 h3 {
   font-size: large;
   color: black;
+}
+
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+}
+
+.small-input {
+  width: 100%;
 }
