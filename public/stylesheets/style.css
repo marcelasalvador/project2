@@ -1,34 +1,27 @@
-html, body {
+html,
+body {
   margin: 0;
   height: 100%;
 }
 
 .thumbnail img {
-    max-height: 150px;
+  max-height: 150px;
 }
 
 .thumbnail .description {
-    color: #7f7f7f;
+  color: #7f7f7f;
 }
 
-/* .price {
-    font-weight: bold;
-    font-size: 16px;
-} */
-
 .navbar .navbar-nav .nav-link {
-    color: #fff;
-    font-size: 0.9em;
-    transition: all 0.5s;
+  color: #fff;
+  font-size: 0.9em;
+  transition: all 0.5s;
 }
 .navbar .navbar-nav .nav-link:hover {
   /* background-color: black; */
   color: black;
   font-weight: normal;
   text-decoration: underline;
-  
-  
- 
 }
 
 .navbar-brand {
@@ -36,23 +29,12 @@ html, body {
   font-weight: lighter;
 }
 
-/* .navbar-toggler {
-  border: .4rem solid #ccc;
-}
-
-.navbar-toggler-icon {
-  border: .4rem solid #ccc;
-} */
-
-
-
 .jumbotron {
   position: relative;
-    background:  url('https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w');
-    background-position: center center; 
-    ;
-    background-size: cover;
-  height:89%;
+  background: url("https://images.squarespace-cdn.com/content/v1/54ac7b74e4b0e845494f6319/1521405246236-SUTZH87RG9SCVDPBXK3Q/IMG_2158.jpg?format=1500w");
+  background-position: center center;
+  background-size: cover;
+  height: 89%;
   background-size: cover;
 }
 
@@ -62,7 +44,7 @@ html, body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -73,49 +55,63 @@ html, body {
 
 .btn {
   transition: all 0.2s ease-in-out;
-  color:grey;
+  color: grey;
   background-color: white;
 }
 
 .btn:hover {
   color: rgb(29, 28, 28);
-
 }
 
+.login {
 
-.auth-buttons{
-display: inline-block;
-outline: 0;
-border: 0;
-cursor: pointer;
-background: #000000;
-color: #ffffff;
-border-radius: 8px;
-padding: 10px 18px 10px;
-font-size: 18px;
-font-weight: 500;
-line-height: 1;
-transition: transform 200ms,background 200ms;
-}
-
-.buttons:hover{
-    transform: translateY(-2px);
-}
-
-#small-buttons {
-  font-size:small;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: #000000;
+  color: #FFFFFF;
+  
+  padding: 14px 24px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 200ms,background 200ms;
+ 
   
 }
 
-#small-buttons:hover{
-  color:#ffffff;
+.auth-buttons {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px 18px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  transition: transform 200ms, background 200ms;
+}
+
+.buttons:hover {
+  transform: translateY(-2px);
+}
+
+#small-buttons {
+  font-size: small;
+}
+
+#small-buttons:hover {
+  color: #ffffff;
   transition: all 0.5s;
 }
 
 #small-buttons-download {
-  
-  font-size:smaller;
-  color:grey;
+  font-size: smaller;
+  color: grey;
 }
 
 .caption {
@@ -123,6 +119,6 @@ transition: transform 200ms,background 200ms;
 }
 
 h3 {
-  font-size:large;
-  color: black
+  font-size: large;
+  color: black;
 }
